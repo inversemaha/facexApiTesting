@@ -126,7 +126,7 @@ class FacexFaceApiController extends Controller
         $imageObject1 = makecUrlFile($IMAGE1_PATH);
         $imageObject2 = makecUrlFile($IMAGE2_PATH);
         $request = curl_init();
-        $queryUrl = "http://facexapi.com/compare_faces?face_det=1"; // face compare url
+        $queryUrl = "http://facexapi.com/match_faces"; // face compare url
         $imageObject =  array("img_1" => $imageObject1, "img_2" => $imageObject2);
         curl_setopt($request, CURLOPT_URL, $queryUrl);
         curl_setopt($request, CURLOPT_POST, true);
